@@ -6,25 +6,39 @@ body {
   justify-content: center;
   height: 100vh;
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
   font-size: 40px;
   color: #663399;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 20px;
 }
 
 button {
   padding: 10px 20px;
   background-color: #663399;
   color: #ffffff;
+  padding: 12px 24px;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px;
   font-size: 20px;
-  margin-top: 20px;
+  margin-top: 30px;
   cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
+button:active {
+  transform: scale(0.95);
+}
 button:hover {
   background-color: #ffffff;
   color: #663399;
+  transform: scale(1.05);
 }
