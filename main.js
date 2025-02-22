@@ -1,8 +1,16 @@
 async function fetchQuote() {
-    const req = await fetch('https://api.quotable.io/random');
-    const respond = await req.json();
-    let { author, content } = respond;
-    return { author, content };
+    try {
+        const req = await fetch('https://api.quotable.io/random');
+        const respond = await req.json();
+        let { author, content } = respond;
+        return { author, content };
+    } catch (error) {
+        console.error(error);
+        return {
+            author: 'Unknown',
+            content: 'An error occurred while fetching the quote',
+        };
+    }
 }
 const message = document.querySelector('#message');
 const author = document.querySelector('.author');
